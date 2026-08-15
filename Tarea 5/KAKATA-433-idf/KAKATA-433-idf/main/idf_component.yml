@@ -1,0 +1,7 @@
+# Dependencias que se descargan solas al compilar con "idf.py build"
+# (equivalente al lib_deps de PlatformIO, pero via el Component Registry
+# oficial de Espressif: https://components.espressif.com)
+dependencies:
+  espressif/esp_tinyusb: "^1.4.4"
+  idf:
+    version: ">=5.0"
