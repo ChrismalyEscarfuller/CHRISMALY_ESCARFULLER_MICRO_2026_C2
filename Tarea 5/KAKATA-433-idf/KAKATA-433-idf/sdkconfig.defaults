@@ -1,0 +1,17 @@
+# =====================================================================
+#  Configuracion base para ESP32-S3 + USB nativo (TinyUSB) + HID
+#  Revisa estos valores con "idf.py menuconfig" si tu version de
+#  ESP-IDF usa nombres de opcion distintos (cambian entre versiones).
+# =====================================================================
+
+CONFIG_IDF_TARGET="esp32s3"
+
+# --- USB OTG nativo (obligatorio para HID por USB) ---
+CONFIG_USB_OTG_SUPPORTED=y
+
+# --- Particiones: dejamos espacio para NVS (calibracion) ---
+CONFIG_PARTITION_TABLE_SINGLE_APP=y
+
+# --- FreeRTOS / rendimiento ---
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=8192
+CONFIG_FREERTOS_HZ=1000
