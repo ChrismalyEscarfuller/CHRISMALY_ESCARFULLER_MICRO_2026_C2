@@ -1,0 +1,23 @@
+idf_component_register(
+    SRCS
+        main.c
+        state_machine.c
+        motor.c
+        mqtt_handler.c
+        oled_display.c
+        input_handler.c
+        buzzer.c
+        led_handler.c
+        photocell.c
+    INCLUDE_DIRS
+        "."
+        "include"
+    REQUIRES
+        mqtt
+        driver
+        esp_timer
+        esp_wifi
+        esp_netif
+        nvs_flash
+        lwip
+)

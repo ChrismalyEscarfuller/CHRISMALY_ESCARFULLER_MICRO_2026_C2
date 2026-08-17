@@ -1,0 +1,20 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "i2c_bus.c"
+        "lcd_i2c.c"
+        "mpu6050.c"
+        "usb_hid.c"
+        "usb_descriptors.c"
+    INCLUDE_DIRS
+        "."
+    REQUIRES
+        driver
+        nvs_flash
+        esp_wifi
+        esp_netif
+        esp_event
+        mqtt
+        esp_timer
+        esp_rom
+)
